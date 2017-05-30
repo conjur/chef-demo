@@ -23,8 +23,8 @@ Demo files:
   Subdirectories:
   - templates/ - directory containing tokenized XML comfig file in which to substitute values fetched from Conjur
   - etc/ - cached files for demo setup - copied to phpapp cookbook
-    - default.rb - copied to .../cookbooks/phpapp/recipes - THIS IS WHERE THE CONJUR MAJIC IS INVOKED
-    - metadata.rb - copied to .../cookbooks/phpapp - documents dependent cookbooks
+    - default.rb - copied to /root/chef-repo/cookbooks/phpapp/recipes - THIS IS WHERE THE CONJUR MAJIC IS INVOKED
+    - metadata.rb - copied to /root/chef-repo/cookbooks/phpapp - documents dependent cookbooks
 
 Demo flow:
   - vagrant up to build VM named vm0
