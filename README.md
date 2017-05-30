@@ -1,12 +1,12 @@
 # chef-demo
 
-Goal: A simple-to-setup & standalone Chef demo configuration showing how Conjur supports secure, automated assignment of identities on a managed host that can securely fetch secrets.
+Goal: A simple-to-setup Chef demo configuration that can run on a laptop w/o internet connectivity, showing how Conjur supports secure, automated assignment of identities on a managed host that can securely fetch secrets.
 
 Prerequisites:
   - a running Conjur master or cluster (local or remote)
   - Virtualbox & Vagrant installed
 
-Scenario: Vagrant image with Chef client and Conjur client installed. Provisioning script installs all resources needed. Running the demo script populates environment variables and launches Chef-solo. Conjur helper methods let Chef assign identity to an Apache tomcat process that can fetch secrets. This iteration currently only substitutes values into a Tomcat config template which would be used by a Tomcat app to log into a database.
+Scenario: Vagrant image with Chef solo client and Conjur client installed. Provisioning script installs all resources needed. Running the demo script populates environment variables and launches Chef-solo. Conjur helper methods let Chef assign identity to an Apache tomcat process that can fetch secrets. This iteration currently only substitutes values into a Tomcat config template which would be used by a Tomcat app to log into a database.
 
 Demo files:
   - conjur_5.4.0-1_amd64.deb - Cpnjur CLI installation package - NOT IN REPO - you need to download this first
@@ -18,13 +18,13 @@ Demo files:
   - run_demo.sh - sets environment variables, obtains HF token and API key, calls chef-solo
   - DEMORC - resource file to set CONJURRC
   - policy.yml - declarative Conjur security policy
-  - solo.rb - Chef file w/ paths to file cache and cookbooks
+  - solo.rb - Chef solo config file w/ paths to file cache and cookbooks
   - web.json - Chef runbook that drives chef-solo's actions
   
   Subdirectories:
   - templates/ - directory containing tokenized XML comfig file in which to substitute values fetched from Conjur
   - nodes/ - Chef-created dir w/ info re: managed host
-  - etc/ - cached files for demo setup (solo.rb & web.json)
+  - etc/ - cached files for demo setup - copied to phpapp cookbook
 
 Demo flow:
   - vagrant up to build VM named vm0
