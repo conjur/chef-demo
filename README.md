@@ -2,7 +2,7 @@
 
 Goal: A simple-to-setup & standalone Chef demo configuration showing how Conjur supports secure, automated assignment of identities on a managed host that can securely fetch secrets.
 
-Scenario: Vagrant image with Chef client and Conjur client installed. Chef-solo run assigns identity to an Apache tomcat process that can fetch secrets.
+Scenario: Vagrant image with Chef client and Conjur client installed. Provisioning script installs all resources needed. Running demo script populates environment variables and launches Chef-solo. Conjur helper methods let Chef assign identity to an Apache tomcat process that can fetch secrets. This iteration currently only substitutes values into a Tomcat config template which would be used by a Tomcat app to log into a database.
 
 Demo files:
   - DEMORC - resource file to set CONJURRC
