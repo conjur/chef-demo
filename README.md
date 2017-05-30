@@ -16,7 +16,6 @@ Demo files:
   - setup_conjur.sh - called by setup_demo.sh, installs Conjur CLI and initializes connection to Conjur service
     - MAKE SURE the CLI deb installation package is accessible in the /vagrant directory
   - run_demo.sh - sets environment variables, obtains HF token and API key, calls chef-solo
-  - DEMORC - resource file to set CONJURRC
   - policy.yml - declarative Conjur security policy
   - solo.rb - Chef solo config file w/ paths to file cache and cookbooks
   - web.json - Chef runbook that drives chef-solo's actions
