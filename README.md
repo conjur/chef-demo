@@ -15,7 +15,7 @@ Demo files:
   - web.json - Chef runbook that drives chef-solo's actions
   
   Subdirectories:
-  - templates/ - directory of 
+  - templates/ - directory containing tokenized XML comfig file in which to substitute values fetched from Conjur
   - nodes/ - Chef-created dir w/ info re: managed host
   - etc/ - cached files for demo setup (solo.rb & web.json)
 
