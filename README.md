@@ -22,7 +22,6 @@ Demo files:
   
   Subdirectories:
   - templates/ - directory containing tokenized XML comfig file in which to substitute values fetched from Conjur
-  - nodes/ - Chef-created dir w/ info re: managed host
   - etc/ - cached files for demo setup - copied to phpapp cookbook
     - default.rb - copied to .../cookbooks/phpapp/recipes - THIS IS WHERE THE CONJUR MAJIC IS INVOKED
     - metadata.rb - copied to .../cookbooks/phpapp - documents dependent cookbooks
