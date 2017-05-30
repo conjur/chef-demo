@@ -29,7 +29,7 @@ Demo files:
 Demo flow:
   - vagrant up to build VM named vm0
   - vagrant ssh vm0 - log into VM
-  - cd to /vagrant and "sudo ./setup_demo.sh" to provision demo - once this is done you don't need an internet connection
+  - cd to /vagrant and "sudo ./setup_demo.sh" to provision demo - once this is done you don't need an internet connection if you have a Conjur master running on your laptop
   - "./run_demo.sh" - runs demo
 
 Potential enhancements
