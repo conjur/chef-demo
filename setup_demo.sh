@@ -10,7 +10,6 @@ apt-get install jq
 curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
 chef-client -v
 
-cd /root
 # setup the master chef repo
 wget http://github.com/opscode/chef-repo/tarball/master
 tar xvf master
@@ -18,7 +17,7 @@ rm master
 mv chef-boneyard-chef-repo-605eeda /root/chef-repo
 cd /root/chef-repo/
 mkdir .chef
-echo "cookbook_path [ '/vagrant', '/root/chef-repo/cookbooks' ]" > .chef/knife.rb
+echo "cookbook_path ['/root/chef-repo/cookbooks']" > .chef/knife.rb
 
 # download dependent cookbooks
 cd /root/chef-repo/cookbooks
