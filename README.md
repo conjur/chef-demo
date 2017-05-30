@@ -9,7 +9,7 @@ Prerequisites:
 Scenario: Vagrant image with Chef solo client and Conjur client installed. Provisioning script installs all resources needed. Running the demo script populates environment variables and launches Chef-solo. Conjur helper methods let Chef assign identity to an Apache tomcat process that can fetch secrets. This iteration currently only substitutes values into a Tomcat config template which would be used by a Tomcat app to log into a database.
 
 Demo files:
-  - conjur_5.4.0-1_amd64.deb - Cpnjur CLI installation package - NOT IN REPO - you need to download this first
+  - conjur_5.4.0-1_amd64.deb - Conjur CLI installation package - NOT IN REPO - you need to download this first
     - https://github.com/conjurinc/cli-ruby/releases/download/v5.4.0/conjur_5.4.0-1_amd64.deb
   - Vagrantfile - builds Ubuntu 14.04 VM for managed host - DEMO IS RUN FROM INSIDE THIS
   - setup_demo.sh - provisions Chef dev kit, repo, cookbooks and calls setup_conjur.sh
