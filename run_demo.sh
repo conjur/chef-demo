@@ -23,7 +23,8 @@ export CONJUR_AUTHN_API_KEY=$(curl -s --cacert $CERT \
          | jq -r '.api_key')
 printf "\nAPI key is: %s\n\n" $CONJUR_AUTHN_API_KEY
 
-sudo chef-solo -c solo.rb -j web.json
+sudo cp -r ./patch/* /root/chef-repo/cookbooks
+sudo -E chef-solo -c solo.rb -j web.json
 
 exit
 
